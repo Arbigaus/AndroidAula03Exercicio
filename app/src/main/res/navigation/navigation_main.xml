@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/shopListFragment">
+
+    <fragment
+        android:id="@+id/shopListFragment"
+        android:name="com.example.aula03exercicio.Controller.ShopListFragment"
+        android:label="fragment_shop_list"
+        tools:layout="@layout/fragment_shop_list" >
+
+        <action
+            android:id="@+id/action_shopListFragment_to_shopAddItemFragment"
+            app:destination="@id/shopAddItemFragment"/>
+        <argument
+            android:name="itemPosition"
+            app:argType="string" />
+        <argument
+            android:name="itemName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopAddItemFragment"
+        android:name="com.example.aula03exercicio.Controller.ShopAddItemFragment"
+        android:label="fragment_shop_add_item"
+        tools:layout="@layout/fragment_shop_add_item" />
+</navigation>
